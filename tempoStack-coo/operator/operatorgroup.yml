@@ -1,0 +1,9 @@
+apiVersion: operators.coreos.com/v1
+kind: OperatorGroup
+metadata:
+  annotations:
+    olm.providedAPIs: TempoMonolithic.v1alpha1.tempo.grafana.com,TempoStack.v1alpha1.tempo.grafana.com
+  name: openshift-tempo-operator-argo
+  namespace: openshift-tempo-operator
+spec:
+  upgradeStrategy: Default
