@@ -116,6 +116,18 @@ Follow these steps:
     oc -n tempomonolithic get pods
     ```
 
+## More realistic deployment **enabling mTLS strict**
+
+* to enable mTLS strict in the scenario and still receive traces execute following command
+    ```
+    oc -n istio-system create -f ossm/mesh/enable-mtls.yml
+    ```
+
+* this will ensure all traffic is mTLS encrypted
+* it will allow port `4317` to the user-collector in the istio-system namespace (extensionProvider otel)
+* it will grant connections to the user-collector in the tempo namespace for the COO UI Plugin instance
+* it will grant connections to the tempoMonolithic instance in the namespace tempomonolithic
+
 ## Accessing the Observe Trace UI
 
 ![OpenShift Console Tracing UI](screenshots/COO-ui-dashboard.png)
