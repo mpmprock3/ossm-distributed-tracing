@@ -34,10 +34,10 @@ spec:
   serviceAccount: tempo-tempo
   storage:
     secret:
-      name: tempo-s3
+      name: tempostack-dev-minio
       type: s3
     tls:
-      enabled: true
+      enabled: false
   storageSize: 1Gi
   template:
     compactor:
