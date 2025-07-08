@@ -6,6 +6,5 @@ resources:
 - rbac.yml
 - tempoStack.yml
 - secret.yml
-- rbac.yml
 
 namespace: tempo
